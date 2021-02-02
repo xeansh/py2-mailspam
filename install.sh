@@ -1,3 +1,7 @@
+clear
+figlet Xeansh
+sleep 1
+clear
 apt-get update -y          # Update
 apt-get autoremove         # Auto Remove
 
@@ -8,3 +12,4 @@ pip install pysocks        # Installing pysocks
 echo "installed pysocks"   # Teling User that installing is done
 
 chmod +x Email-Spam.py     # Giving permission to Email-Spam.py
+pkg install figlet
