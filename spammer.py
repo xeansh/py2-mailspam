@@ -1,5 +1,4 @@
 import os, sys, smtplib, getpass
-from auth import *
 
 try:
 
@@ -29,8 +28,8 @@ try:
         print(R + "Error - This script only works in Gmail and Yahoo." + W)
         sys.exit()
 
-    email_user = auth.email_user
-    passwd     = auth.email_user
+    email_user = 'Your email here.'
+    passwd     = 'Your password here.'
     email_to   = raw_input( R + '\nTo: ' + B)
     subject    = raw_input( R + 'Subject: ' + B)
     body       = raw_input( R + 'Message: ' + B)
