@@ -33,7 +33,7 @@ try:
     email_to   = raw_input( R + '\nTo: ' + B)
     subject    = raw_input( R + 'Subject: ' + B)
     body       = raw_input( R + 'Message: ' + B)
-    total      = input(R+ 'Amount of Sendings'+ B)
+    total      = input(R+ 'Amount of Sendings: '+ B)
 
     try:
 
